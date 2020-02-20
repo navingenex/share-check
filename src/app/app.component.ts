@@ -31,7 +31,7 @@ export class AppComponent  implements OnInit{
     FB.ui({
     display: 'popup',
     method: 'share',
-    href: 'https://zen-davinci-b0b652.netlify.com/',
+    href: 'https://share-fbb.herokuapp.com/',
   }, function(response){});
 }
 }
