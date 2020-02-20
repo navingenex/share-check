@@ -26,9 +26,9 @@ export class AppComponent  implements OnInit{
   }
 
   share(){
-    this.meta.addTag({property:'og:title',content:'Inside app component'})
-    this.meta.addTag({property:'og:image',content:'https://s3-us-west-2.amazonaws.com/brainpunditsimages/files/thumb_15429728584061542972856551.png'});
-    this.meta.addTag({property:'og:description',content:'Share detais from my app'});
+    this.meta.updateTag({property:'og:title',content:'Inside app component'})
+    this.meta.updateTag({property:'og:image',content:'https://s3-us-west-2.amazonaws.com/brainpunditsimages/files/thumb_15429728584061542972856551.png'});
+    this.meta.updateTag({property:'og:description',content:'Share detais from my app'});
     FB.ui({
     display: 'popup',
     method: 'share',
