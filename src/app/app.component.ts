@@ -34,4 +34,10 @@ export class AppComponent  implements OnInit{
     href: 'https://share-fbb.herokuapp.com/',
   }, function(response){});
 }
+
+shareMe(){
+  this.meta.updateTag({property:'og:title',content:'Inside New App component'})
+    this.meta.updateTag({property:'og:image',content:'https://s3-us-west-2.amazonaws.com/brainpunditsimages/files/thumb_15755440083361575544008820.png'});
+    this.meta.updateTag({property:'og:description',content:'Share detais from new app app'});
+}
 }
