@@ -21,14 +21,6 @@ const routes:Routes=[
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule implements OnInit{ 
-  ngOnInit(){
-    FB.init({ 
-      appId: '205134210685473',
-      status: true, 
-      cookie: true, 
-      xfbml: true,
-      version: 'v2.4'
-    });
-  }
+export class AppModule { 
+ 
 }

@@ -19,7 +19,13 @@ export class UserComponent implements OnInit {
     this.meta.updateTag({property:'og:title',content:'Inside New App component'})
     this.meta.updateTag({property:'og:image',content:'https://s3-us-west-2.amazonaws.com/brainpunditsimages/files/thumb_15755440083361575544008820.png'});
     this.meta.updateTag({property:'og:description',content:'Share detais from new app app'});
-   
+    FB.init({ 
+      appId: '205134210685473',
+      status: true, 
+      cookie: true, 
+      xfbml: true,
+      version: 'v2.4'
+    });
   }
   shareMe(){
      FB.ui({
