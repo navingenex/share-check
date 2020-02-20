@@ -1,16 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule, OnInit } from '@angular/core';
+import {RouterModule,Routes} from '@angular/router'
 import { AppComponent } from './app.component';
+import { UserComponent } from './user/user.component';
+declare var FB:any;
 
+
+
+const routes:Routes=[
+{path:'',component:AppComponent},
+{path:'user',component:UserComponent}
+]
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,UserComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' })
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule implements OnInit{ 
+  ngOnInit(){
+    FB.init({ 
+      appId: '205134210685473',
+      status: true, 
+      cookie: true, 
+      xfbml: true,
+      version: 'v2.4'
+    });
+  }
+}
