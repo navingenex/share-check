@@ -31,7 +31,7 @@ export class UserComponent implements OnInit {
      FB.ui({
         display: 'popup',
         method: 'share',
-        href: 'https://share-fbb.herokuapp.com/',
+        href: 'https://share-fbb.herokuapp.com/user',
       }, function(response){});
   }
 }
