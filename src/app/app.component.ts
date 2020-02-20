@@ -22,7 +22,7 @@ export class AppComponent  implements OnInit{
     FB.ui({
     display: 'popup',
     method: 'share',
-    href: 'http://localhost:4200',
+    href: 'https://zen-davinci-b0b652.netlify.com/',
   }, function(response){});
 }
 }
