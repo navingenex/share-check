@@ -15,8 +15,8 @@ export class UserComponent implements OnInit {
   ){
 
   }
-  ngOnInit() {
-    
+  async ngOnInit() {
+    await this.setTags();
     FB.init({ 
       appId: '205134210685473',
       status: true, 
